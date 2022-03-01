@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/card.css">
+    <title>Card game</title>
+</head>
+<body>
+    <div id="cardsDeck">
+    </div>
+    <div>
+        <button id="revealCard" class="reveal-card">Révéler les cartes</button>
+    </div>
+    <template id="cardTemplate">
+        <div id="frameCard" class="frame-card verso">
+            <div id="headerCard" class="header-card">
+                <span class="value-card"></span>
+                <i class="symbole-card"></i>
+            </div>
+            <div id="bodyCard" class="body-card">
+
+            </div>
+            <div id="footerCard" class="footer-card">
+                <span class="symbole-card"></span>
+                <span class="value-card"></span>
+            </div>
+        </div>
+    </template>
+
+    <script src ="./js/card.js"></script>
+</body>
+</html>

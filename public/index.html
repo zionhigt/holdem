@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/card.css">
+
+    <title>Texas hold'em 7 cards</title>
+</head>
+<body>
+    <h1>Texas hold'em 7 cards</h1>
+    <div id="usersContainer" class="container-col user-list-container">
+        <p>Autre joueurs de la partie</p>
+        <ul id="playerInGame">
+
+        </ul>
+    </div>
+    <div id="" class="container-col"></div>
+        <button id="launcherButton" class="reveal-card">Démarer la partie</button>
+    </div>
+    <div class="container-col frame-game">
+        <div id="communGame" class="container-row commun-game">
+            <div id="riverDeck" class="river-deck">
+            </div>
+            <div id="turnDeck">
+            </div>
+            <div id="leftDeck">
+            </div>
+        </div>
+        <div>
+            <button id="nextButton" class="reveal-card">Suivant</button>
+        </div>
+    </div>
+    <div id="frameGame" class="frame-game container-col">
+        <div id="cardsDeck">
+        </div>
+        <div>
+            <button id="revealCard" class="reveal-card">Révéler les cartes</button>
+        </div>
+    </div>
+    <div id="loginContainer" class="container-col">
+        <form action="/api/auth/signin" method="POST">
+            <div class="form-group"><label for="formEmail" class="form-label">E-mail</label><input type="email" name="email" class="form-input" id="formEmail"></div>
+            <div class="form-group"><label for="formInput" class="form-label">Mot de passe</label><input type="password" name="password" class="form-input" id="formInput"></div>
+            <div class="form-group"><input id="formSubmit" type="submit" class="form-input form-submit" id=""></div>
+        </form>
+    </div>
+    <template id="userRowTemplate">
+        <li class="user-row">
+            <span class="user-name"></span>
+            <span class="user-score"></span>
+        </li>
+    </template>
+    <template id="cardTemplate">
+        <div id="frameCard" class="frame-card">
+            <div id="headerCard" class="header-card">
+                <span class="value-card"></span>
+                <i class="symbole-card"></i>
+            </div>
+            <div id="bodyCard" class="body-card">
+    
+            </div>
+            <div id="footerCard" class="footer-card">
+                <span class="symbole-card"></span>
+                <span class="value-card"></span>
+            </div>
+        </div>
+    </template>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"
+    integrity="sha512-nYuHvSAhY5lFZ4ixSViOwsEKFvlxHMU2NHts1ILuJgOS6ptUmAGt/0i5czIgMOahKZ6JN84YFDA+mCdky7dD8A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/init-socket.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/card.js"></script>
+
+</html>
